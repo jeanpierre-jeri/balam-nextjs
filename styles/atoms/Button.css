@@ -1,0 +1,65 @@
+.btn {
+  font-size: 1.5rem;
+  transition-property: background-color, color, box-shadow;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in;
+  @apply font-roboto font-medium text-white inline-flex items-center;
+
+  @screen laptop {
+    font-size: calc(2rem * var(--scale));
+  }
+
+  .icon-plus {
+    font-size: 0.9rem;
+    transition: color 0.4s ease-in;
+    @apply text-white;
+  }
+
+  &.primary {
+    padding: 0.7em 0.872em;
+    border-radius: 0.26em;
+    gap: 0.7em;
+    @apply bg-primary;
+
+    @screen laptop {
+      gap: 0.9em;
+      padding: 0.85em 1.739em;
+
+      .icon-plus {
+        font-size: 1.2rem;
+      }
+
+      &:hover {
+        box-shadow: 0 0 4px rgb(0 0 0 / 0.15);
+        @apply text-primary bg-white;
+
+        .icon-plus {
+          @apply text-primary;
+        }
+      }
+    }
+  }
+
+  &.secondary {
+    padding: 0.734em 0.916em;
+    border-radius: calc(0.5rem * var(--scale));
+    gap: 0.6em;
+    @apply bg-blue-100;
+
+    @screen laptop {
+      padding: 0.775em 1.216em;
+
+      &:hover {
+        @apply bg-primary text-white;
+
+        .icon-plus {
+          @apply text-white;
+        }
+      }
+    }
+
+    .icon-plus {
+      font-size: calc(0.8rem * var(--scale));
+    }
+  }
+}

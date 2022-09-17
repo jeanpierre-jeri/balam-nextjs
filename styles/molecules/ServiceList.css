@@ -1,0 +1,15 @@
+.hs-list {
+  gap: 1.9rem;
+  @apply grid mt-10;
+
+  @screen tablet {
+    gap: calc(4.2rem * var(--scale));
+    @apply grid-cols-2;
+  }
+
+  @screen laptop {
+    row-gap: calc(8.5rem * var(--scale));
+    margin-top: calc(4rem * var(--scale));
+    @apply grid-cols-3;
+  }
+}

@@ -1,0 +1,95 @@
+.main-banner {
+  min-height: 34rem;
+  height: 38vmax;
+  clip-path: polygon(100% 0, 100% 84%, 6% 100%, 0 98.5%, 0 0);
+  @apply relative;
+
+  @screen tablet {
+    clip-path: polygon(100% 0, 100% 80%, 30% 100%, 0 90%, 0 0);
+  }
+
+  @screen laptop {
+    clip-path: polygon(100% 0, 100% 75%, 33% 100%, 0 85.5%, 0 0);
+    height: 42.5vmax;
+    margin-bottom: calc(9.4rem * var(--scale));
+  }
+
+  &::after {
+    content: '';
+    background-image: linear-gradient(to right, rgb(23 23 23), rgb(34 34 34 / 0.57));
+    z-index: 1;
+    @apply absolute inset-0;
+
+    @screen laptop {
+      background-image: linear-gradient(
+        to right,
+        rgb(23 23 23),
+        rgb(34 34 34 / 0.57) 34.55%,
+        rgb(96 96 96 / 0) 53.26%
+      );
+    }
+  }
+
+  &__content {
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    z-index: 2;
+    padding: 0 2.5rem;
+    @apply absolute font-titles text-white font-bold;
+
+    @screen tablet {
+      @apply p-0;
+      width: 78%;
+      @apply mx-auto;
+    }
+
+    @screen laptop {
+      top: 45.2%;
+    }
+  }
+
+  &__subtitle {
+    font-size: 1.5rem;
+    @apply font-semibold text-slate-200;
+
+    @screen laptop {
+      font-size: calc(2.1rem * var(--scale));
+    }
+  }
+
+  &__title {
+    font-size: 4.18359rem;
+    margin-top: 0.15em;
+    @apply font-bold;
+
+    @screen laptop {
+      margin-top: 0.2em;
+      font-size: calc(7.5rem * var(--scale));
+    }
+
+    span {
+      @apply font-medium block;
+    }
+  }
+
+  &__text {
+    max-width: 37ch;
+    margin-top: 0.3em;
+    @apply w-full text-white;
+
+    @screen laptop {
+      margin-top: 0.4em;
+      max-width: 50ch;
+    }
+  }
+
+  &__btn {
+    margin-top: 1.4em;
+
+    @screen laptop {
+      margin-top: 3.2em;
+    }
+  }
+}

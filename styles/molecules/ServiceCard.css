@@ -1,0 +1,59 @@
+.hs-card {
+  box-shadow: 0 0 calc(4px * var(--scale)) rgb(0 0 0 / 0.25);
+  @apply flex flex-col relative w-full;
+
+  &::after {
+    content: attr(data-service);
+    font-size: 1.5rem;
+    padding: 0.7em 1.328em;
+    top: 1em;
+    left: 1em;
+    @apply absolute font-titles text-white font-medium bg-night/[.75];
+
+    @screen laptop {
+      padding: 0.7em 1em;
+      font-size: calc(1.9rem * var(--scale));
+    }
+  }
+
+  &__picture {
+    height: 16.8rem;
+
+    @screen tabletxl {
+      height: calc(27rem * var(--scale));
+    }
+  }
+
+  &__body {
+    padding: 2rem 2.7rem 3.5rem;
+    @apply flex flex-col items-center flex-1;
+
+    @screen laptop {
+      padding: calc(3rem * var(--scale)) calc(4.4rem * var(--scale));
+      padding-bottom: calc(3.3rem * var(--scale));
+    }
+  }
+
+  &__title {
+    font-size: 1.7rem;
+    margin-bottom: 0.6em;
+    @apply font-titles font-bold text-gray-300;
+
+    @screen laptop {
+      font-size: calc(2.4rem * var(--scale));
+      margin-bottom: 0.45em;
+    }
+  }
+
+  &__content {
+    margin-bottom: 1em;
+
+    @screen laptop {
+      margin-bottom: 1.5em;
+    }
+  }
+
+  &__btn {
+    @apply mt-auto;
+  }
+}

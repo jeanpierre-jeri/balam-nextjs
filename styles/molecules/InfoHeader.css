@@ -1,0 +1,43 @@
+.info-header {
+  @apply hidden;
+  @screen laptop {
+    height: calc(4.8rem * var(--scale));
+    @apply bg-secondary flex text-white;
+  }
+
+  &__container {
+    width: 78%;
+    max-width: 148.5rem;
+    @apply mx-auto flex items-center justify-between;
+  }
+
+  &__left {
+    gap: calc(3rem * var(--scale));
+    font-size: calc(1.8rem * var(--scale));
+    @apply flex items-center font-roboto font-normal;
+  }
+
+  &__phone {
+    gap: calc(1.4rem * var(--scale));
+    font-size: calc(1.6rem * var(--scale));
+    @apply flex items-center font-light font-roboto;
+
+    .icon-phone {
+      font-size: calc(1.6rem * var(--scale));
+    }
+  }
+
+  &__right {
+    gap: calc(1.5rem * var(--scale));
+    @apply flex items-center;
+  }
+
+  &__lang {
+    z-index: 2;
+    margin-top: calc(-4px * var(--scale));
+
+    @screen laptop {
+      z-index: 11;
+    }
+  }
+}

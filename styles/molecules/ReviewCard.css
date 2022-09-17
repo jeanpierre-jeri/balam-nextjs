@@ -1,0 +1,103 @@
+.custom-icon {
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.hr-card {
+  padding: 3rem 3rem 2.2rem 3.5rem;
+  @apply bg-secondary text-white relative rounded-xl h-full;
+
+  @screen laptop {
+    padding: calc(5rem * var(--scale)) calc(5rem * var(--scale));
+    gap: 13%;
+    border-radius: calc(1.5rem * var(--scale));
+    @apply flex flex-row-reverse justify-between items-center;
+  }
+
+  &::after {
+    content: '\e90d';
+    font-size: calc(7.3rem * var(--scale));
+    color: rgb(11 38 117 / 0.25);
+    left: 28%;
+    top: 18%;
+    @apply custom-icon absolute hidden;
+
+    @screen laptop {
+      @apply block;
+    }
+  }
+
+  &__decoration::after {
+    content: '';
+    height: 3.3rem;
+    width: 7rem;
+    margin-left: 15%;
+    margin-top: -1px;
+    clip-path: polygon(0 0, 0% 100%, 100% 0);
+    @apply block bg-secondary;
+
+    @screen laptop {
+      width: 19.714%;
+      /* width: calc(12.4rem * var(--scale)); */
+      height: calc(4.3rem * var(--scale));
+      margin-left: 15.5%;
+      /* @apply hidden; */
+    }
+  }
+
+  &__content {
+    font-size: 1.5rem;
+    @apply text-white;
+
+    @screen laptop {
+      font-size: calc(1.9rem * var(--scale));
+      line-height: calc(32 / 19);
+      @apply flex-1;
+    }
+  }
+
+  &__person {
+    gap: 0.8rem;
+    @apply flex items-center mt-10 ml-6;
+
+    @screen laptop {
+      width: 17.02%;
+      @apply m-0 flex-col flex-shrink-0;
+    }
+  }
+
+  &__picture {
+    width: 6rem;
+    border: 1px solid white;
+    padding: 3px;
+    @apply rounded-full;
+
+    @screen laptop {
+      @apply w-full;
+    }
+
+    img {
+      @apply rounded-full;
+    }
+  }
+
+  &__name {
+    font-size: 1.5rem;
+    margin-bottom: 0.4em;
+    @apply font-dm-sans font-medium;
+
+    @screen laptop {
+      font-size: calc(1.7rem * var(--scale));
+      margin-top: 0.5em;
+      @apply font-roboto font-bold;
+    }
+  }
+}

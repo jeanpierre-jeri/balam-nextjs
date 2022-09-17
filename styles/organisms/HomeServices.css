@@ -1,0 +1,36 @@
+.h-services {
+  @apply text-center pb-20 pt-12;
+
+  @screen laptop {
+    /* padding-top: calc(9.4rem * var(--scale)); */
+    padding-bottom: calc(8.6rem * var(--scale));
+    @apply pt-0;
+  }
+
+  &__container {
+    padding: 0 4.5rem;
+
+    @screen laptop {
+      width: 72%;
+      max-width: 139rem;
+      @apply p-0;
+    }
+  }
+
+  &__title {
+    max-width: 21ch;
+    @apply mx-auto;
+
+    @screen laptop {
+      line-height: calc(56 / 45);
+    }
+  }
+
+  &__content {
+    margin-top: 0.5em;
+
+    @screen laptop {
+      margin-top: 1.1em;
+    }
+  }
+}

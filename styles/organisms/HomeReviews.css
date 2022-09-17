@@ -1,0 +1,96 @@
+.hr-section {
+  padding: 6rem 3rem 6.4rem;
+
+  @screen laptop {
+    padding-top: calc(15.6rem * var(--scale));
+    padding-bottom: calc(8.5rem * var(--scale));
+    padding-left: 11%;
+    gap: 5.4%;
+    @apply pr-0;
+    @apply flex;
+  }
+
+  &__left {
+    @screen laptop {
+      width: 37.5%;
+      @apply flex-shrink-0;
+    }
+  }
+
+  &__title {
+    font-size: 2.6rem;
+    margin-bottom: 0.4em;
+    @apply font-titles font-bold;
+
+    @screen laptop {
+      font-size: calc(4.5rem * var(--scale));
+      margin-bottom: 0.3em;
+    }
+  }
+
+  &__swiper-container {
+    @apply max-w-full overflow-hidden mt-8;
+
+    @screen laptop {
+      @apply flex-1 mt-0;
+    }
+  }
+
+  &__slide {
+    @apply h-auto;
+  }
+
+  &__pagination {
+    gap: calc(0.7rem * var(--scale));
+    margin-top: 5.2rem;
+    @apply flex justify-center;
+
+    @screen laptop {
+      margin-top: calc(8.5rem * var(--scale));
+      @apply justify-start;
+    }
+
+    .swiper-pagination-bullet {
+      width: 1.3rem;
+      height: 1.3rem;
+      border: 1px solid theme('colors.primary');
+      transition: background-color 0.3s ease;
+      @apply rounded-full bg-transparent cursor-pointer;
+
+      @screen laptop {
+        width: calc(3.1rem * var(--scale));
+        height: calc(5px * var(--scale));
+        border-radius: calc(5px * var(--scale));
+        border: 1px solid;
+        @apply border-blue-100;
+      }
+    }
+
+    .swiper-pagination-bullet-active {
+      @apply bg-primary;
+
+      @screen laptop {
+        @apply bg-blue-100;
+      }
+    }
+  }
+
+  &__navigation {
+    --br: calc(2.5rem * var(--scale));
+    @apply hidden;
+
+    @screen laptop {
+      width: calc(4.2rem * var(--scale));
+      height: calc(3.2rem * var(--scale));
+      font-size: calc(1.7rem * var(--scale));
+      border-radius: var(--br) 0 0 var(--br);
+      margin-right: calc(1.2rem * var(--scale));
+      margin-top: calc(4rem * var(--scale));
+      @apply bg-primary text-white inline-flex items-center justify-center cursor-pointer;
+    }
+  }
+
+  &__next {
+    transform: rotateY(180deg);
+  }
+}

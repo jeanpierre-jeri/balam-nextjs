@@ -1,0 +1,55 @@
+.footer {
+  padding: 6rem 2.5rem 10rem;
+  @apply bg-blue-200 text-white;
+
+  @screen laptop {
+    padding: calc(5rem * var(--scale)) 0;
+    @apply relative;
+  }
+
+  &__info {
+    gap: 1.8rem;
+    @apply flex flex-col;
+
+    @screen laptop {
+      gap: calc(5rem * var(--scale));
+      @apply flex-row justify-center items-center;
+    }
+
+    &::after {
+      content: '';
+      height: 1px;
+      margin-top: 2.5rem;
+      @apply block w-full bg-white;
+
+      @screen laptop {
+        @apply hidden;
+      }
+    }
+  }
+
+  &__days {
+    letter-spacing: 0.05em;
+    @apply text-white font-roboto font-medium;
+
+    @screen laptop {
+      font-size: calc(1.8rem * var(--scale));
+      @apply font-normal;
+    }
+  }
+
+  &__link {
+    font-size: 1.5rem;
+    letter-spacing: 0.05em;
+    gap: calc(1.5rem * var(--scale));
+    @apply flex font-roboto font-normal;
+
+    @screen laptop {
+      font-size: calc(1.8rem * var(--scale));
+    }
+  }
+
+  &__icon {
+    font-size: calc(1.9rem * var(--scale));
+  }
+}

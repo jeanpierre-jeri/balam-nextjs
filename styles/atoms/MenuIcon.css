@@ -1,0 +1,61 @@
+.menu-icon {
+  @apply relative isolate;
+  &.hamburguer {
+    height: 5.5rem;
+    width: 5.5rem;
+    transition-property: background-color, height, width;
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
+    border-top-left-radius: 10rem;
+    border-bottom-left-radius: 10rem;
+    @apply flex justify-center items-center relative cursor-pointer bg-secondary;
+    @screen laptop {
+      @apply hidden;
+    }
+    span {
+      height: 0.3rem;
+      width: 2.4rem;
+      transition: transform 0.5s ease, background-color 0.5s ease;
+      @apply bg-white inline-block absolute mx-auto rounded-2xl;
+    }
+    span:nth-child(1) {
+      transform: translateY(-0.8rem);
+    }
+    span:nth-child(3) {
+      transform: translateY(0.8rem);
+    }
+
+    /* Animacion cuando "isActive" es true */
+    &.change {
+      width: 2.7rem;
+      height: 2.7rem;
+      @apply bg-white rounded-full;
+      span {
+        @apply bg-secondary;
+      }
+      span:nth-child(1) {
+        transform: rotateZ(42.19deg) scale(0.45);
+      }
+
+      span:nth-child(2) {
+        @apply opacity-0;
+      }
+
+      span:nth-child(3) {
+        transform: rotateZ(-42.19deg) scale(0.45);
+      }
+
+      .bg-menu {
+        opacity: 1;
+      }
+    }
+  }
+
+  .bg-menu {
+    z-index: -1;
+    top: 0;
+    width: 4.5rem;
+    height: 8.5rem;
+    @apply absolute right-0 opacity-0;
+  }
+}

@@ -1,0 +1,23 @@
+.socials {
+  gap: 1.4rem;
+  font-size: 1.7rem;
+  @apply flex justify-end mt-5;
+
+  @screen laptop {
+    right: 11%;
+    top: calc(5rem * var(--scale));
+    font-size: calc(2.976rem * var(--scale));
+    gap: calc(1.553rem * var(--scale));
+    @apply m-0 absolute;
+  }
+
+  .youtube {
+    font-size: 2.5rem;
+    margin-top: -4px;
+
+    @screen laptop {
+      font-size: calc(4.4rem * var(--scale));
+      margin-top: calc(-8px * var(--scale));
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.main-title {
+  font-size: 2.6rem;
+  line-height: calc(32 / 26);
+  @apply font-titles font-bold text-gray-300;
+
+  @screen laptop {
+    font-size: calc(4.5rem * var(--scale));
+    line-height: calc(56 / 45);
+  }
+
+  span {
+    @screen laptop {
+      @apply block;
+    }
+  }
+}

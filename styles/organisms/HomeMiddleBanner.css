@@ -1,0 +1,49 @@
+.hm-banner {
+  min-height: 34.2rem;
+  height: 38.17vmax;
+  @apply relative;
+
+  @screen tablet {
+    min-height: auto;
+    height: 26vmax;
+  }
+
+  @screen laptop {
+    height: calc(31.2rem * var(--scale));
+  }
+
+  &__content {
+    top: 18%;
+    right: 15%;
+    max-width: 33ch;
+    @apply absolute text-white w-full;
+
+    @screen tablet {
+      right: 0;
+      max-width: 62ch;
+    }
+
+    @screen laptop {
+      top: 50%;
+      transform: translateY(-50%);
+      right: 18.2%;
+    }
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    line-height: calc(32 / 25);
+    margin-bottom: 0.1em;
+    @apply font-titles font-bold;
+
+    @screen laptop {
+      font-size: calc(4.5rem * var(--scale));
+      @apply mb-0;
+    }
+  }
+
+  &__text {
+    margin-bottom: 1.6em;
+    @apply text-white;
+  }
+}
