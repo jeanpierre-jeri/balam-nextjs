@@ -1,0 +1,30 @@
+.hc-section {
+  background-image: var(--bg-mob);
+  background-size: cover;
+  background-position: center;
+  padding-top: 6.4rem;
+  padding-bottom: 7.8rem;
+  @apply relative isolate;
+
+  @screen laptop {
+    padding: calc(12rem * var(--scale)) 0;
+    background-image: var(--bg);
+    box-shadow: 0 4px 4px rgb(0 0 0 / 0.25);
+  }
+  &::after {
+    content: '';
+    background-image: linear-gradient(to right, #151515, #242424, #151515);
+    mix-blend-mode: multiply;
+    opacity: 0.95;
+    z-index: -1;
+    @apply absolute inset-0;
+  }
+  &__swiper-container {
+    width: 60%;
+    @apply max-w-full overflow-hidden mx-auto;
+
+    @screen laptop {
+      max-width: 115.2rem;
+    }
+  }
+}

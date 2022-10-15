@@ -1,0 +1,200 @@
+.ha-section {
+  background-image: url('/img/about-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 6rem 0;
+
+  &__container {
+    padding: 0 2.5rem;
+
+    @screen tablet {
+      width: 78.5%;
+      max-width: 150.8rem;
+      @apply mx-auto p-0;
+    }
+
+    @screen laptop {
+      gap: 4.2%;
+      padding-top: calc(14.3rem * var(--scale));
+      padding-bottom: calc(6rem * var(--scale));
+      @apply flex flex-row-reverse;
+    }
+  }
+
+  &__title {
+    font-size: 2.6rem;
+    line-height: calc(32 / 26);
+    margin-bottom: 0.3em;
+    @apply text-gray-300 font-titles font-bold;
+
+    @screen laptop {
+      font-size: calc(4.5rem * var(--scale));
+      margin-bottom: 0.2em;
+      margin-top: 1.95em;
+    }
+  }
+
+  &__content {
+    @apply text-content;
+
+    @screen laptop {
+      line-height: calc(32 / 19);
+    }
+  }
+
+  &__list {
+    gap: 0.8rem;
+    margin-top: 1.8rem;
+    @apply flex;
+
+    @screen laptop {
+      gap: calc(2.3rem * var(--scale));
+      margin-top: calc(4.8rem * var(--scale));
+    }
+  }
+
+  &__item {
+    padding: 1.88rem 2.2rem;
+    @apply text-white bg-secondary flex flex-col relative;
+
+    @screen laptop {
+      padding: calc(3.35rem * var(--scale)) calc(3.965rem * var(--scale));
+    }
+
+    &::after {
+      content: '';
+      height: 2.8px;
+      bottom: -4.4px;
+      left: 0;
+      @apply absolute w-full bg-blue-100;
+
+      @screen laptop {
+        height: calc(5px * var(--scale));
+        bottom: calc(-9px * var(--scale));
+      }
+    }
+
+    .h4 {
+      font-size: 2.8rem;
+      @apply font-titles font-bold;
+
+      @screen laptop {
+        font-size: calc(5rem * var(--scale));
+      }
+    }
+
+    .span {
+      font-size: 1.847rem;
+      @apply inline-block font-titles font-semibold;
+
+      @screen laptop {
+        font-size: calc(3.3rem * var(--scale));
+      }
+    }
+  }
+
+  &__subtitle {
+    font-size: 1.7rem;
+    margin-top: 1.5em;
+    @apply text-content font-roboto font-medium;
+
+    @screen laptop {
+      font-size: calc(2.1rem * var(--scale));
+      margin-top: 2.8em;
+    }
+  }
+
+  &__content-two {
+    margin-top: 0.6em;
+
+    @screen laptop {
+      margin-top: 1em;
+    }
+  }
+
+  &__btn {
+    @apply hidden;
+
+    @screen laptop {
+      margin-top: 3.7em;
+      @apply inline-flex;
+    }
+  }
+}
+
+.has-images {
+  height: 41.6rem;
+  margin-top: 2.6rem;
+  @apply relative w-full;
+
+  @screen laptop {
+    width: calc(75.3rem * var(--scale));
+    height: calc(81.2rem * var(--scale));
+    @apply flex-shrink-0 mt-0;
+  }
+
+  &__image {
+    border: 7.3px solid white;
+    @apply rounded-full absolute;
+
+    @screen laptop {
+      border: calc(1.5rem * var(--scale)) solid white;
+    }
+  }
+
+  &__image:nth-child(1) {
+    top: 0;
+    left: 0;
+    width: 20rem;
+    height: 20rem;
+
+    @screen laptop {
+      width: calc(41.1rem * var(--scale));
+      height: calc(41.1rem * var(--scale));
+    }
+  }
+
+  &__image:nth-child(2) {
+    bottom: 0;
+    left: 8rem;
+    width: 27rem;
+    height: 27rem;
+
+    @screen laptop {
+      width: calc(55.6rem * var(--scale));
+      height: calc(55.6rem * var(--scale));
+      left: calc(10.2rem * var(--scale));
+    }
+  }
+
+  &__title {
+    font-size: 4.3rem;
+    border-radius: 1em;
+    left: 21.6rem;
+    top: 17%;
+    padding: 0 0.3em;
+    @apply font-titles font-bold text-white;
+    @apply absolute bg-secondary flex items-center gap-4;
+
+    @screen laptop {
+      top: calc(12.6rem * var(--scale));
+      left: auto;
+      right: 0;
+      font-size: calc(9.075rem * var(--scale));
+      gap: calc(1.8rem * var(--scale));
+      padding: 0.2em 0.2421em;
+      @apply leading-none;
+    }
+
+    .span {
+      max-width: 9ch;
+      font-size: 1.65rem;
+      @apply w-full;
+
+      @screen laptop {
+        font-size: calc(3.5rem * var(--scale));
+      }
+    }
+  }
+}

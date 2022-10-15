@@ -1,0 +1,29 @@
+.hcs-card {
+  gap: calc(1.5rem * var(--scale));
+  @apply flex flex-col;
+
+  @screen laptop {
+    @apply w-fit;
+  }
+  &__picture {
+    height: 6.2rem;
+    @apply max-w-full w-auto mx-auto;
+
+    @screen laptop {
+      height: calc(8.7rem * var(--scale));
+    }
+
+    img {
+      width: auto;
+      @apply max-w-full;
+    }
+  }
+  &__title {
+    font-size: 1.6rem;
+    @apply text-white font-titles font-bold text-center;
+
+    @screen laptop {
+      font-size: calc(2.4rem * var(--scale));
+    }
+  }
+}

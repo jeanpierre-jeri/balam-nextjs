@@ -1,0 +1,43 @@
+.hg-section {
+  padding: 6rem 2.4rem 4.8rem;
+  @apply text-center;
+
+  @screen laptop {
+    padding: calc(12rem * var(--scale)) 0;
+  }
+
+  &__content {
+    margin-top: 1em;
+
+    @screen laptop {
+      margin-top: 0.7em;
+    }
+  }
+
+  &__list {
+    gap: 1.5rem;
+    row-gap: 1.8rem;
+    @apply grid mt-12;
+
+    @screen phone {
+      @apply grid-cols-2;
+    }
+
+    @screen tablet {
+      width: 80%;
+      @apply mx-auto;
+    }
+
+    @screen tabletlg {
+      @apply grid-cols-3;
+    }
+
+    @screen laptop {
+      row-gap: calc(3.631rem * var(--scale));
+      column-gap: calc(3.2rem * var(--scale));
+      margin-top: calc(4rem * var(--scale));
+      max-width: 149.8rem;
+      @apply grid-cols-4;
+    }
+  }
+}

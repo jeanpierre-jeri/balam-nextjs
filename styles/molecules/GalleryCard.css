@@ -1,0 +1,42 @@
+.custom-icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.hgs-card {
+  border-radius: 5px;
+  @apply overflow-hidden relative cursor-pointer;
+
+  @screen laptop {
+    border-radius: calc(1rem * var(--scale));
+  }
+
+  &::after {
+    content: '\e901'; /* icon-zoom */
+    font-size: 1.3rem;
+    width: 2.778rem;
+    height: 2.778rem;
+    top: 1.2rem;
+    right: 1.2rem;
+    @apply flex justify-center items-center;
+    @apply custom-icon absolute bg-white text-secondary rounded-full;
+
+    @screen laptop {
+      font-size: calc(2rem * var(--scale));
+      width: calc(4.545rem * var(--scale));
+      height: calc(4.545rem * var(--scale));
+      top: 1em;
+      right: 1em;
+    }
+  }
+}

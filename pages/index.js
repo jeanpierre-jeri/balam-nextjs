@@ -1,6 +1,15 @@
 import { getGenerals } from '../lib/getGenerals'
 import { baseApi } from './api/baseApi'
-import { HomeBanner, HomeServices, HomeMiddleBanner, HomeReviews } from '@/components/organisms'
+import {
+  HomeBanner,
+  HomeServices,
+  HomeMiddleBanner,
+  HomeReviews,
+  HomeAbout,
+  HomeCharacteristics,
+  HomeGallery
+} from '@/components/organisms'
+import { SeoEngine } from '@/components/global/SeoEngine'
 
 export default function Home({ home }) {
   return (
@@ -34,6 +43,32 @@ export default function Home({ home }) {
         content={home.content_reviews}
         reviews={home.list_reviews}
       />
+      <HomeAbout
+        id="about-us"
+        data-id="140"
+        data-es="151"
+        title={home.title_about}
+        images={home.list_images_about}
+        content={home.content_about}
+        numberList={home.list_number_about}
+        subtitle={home.subtitle_about}
+        contentTwo={home.content_two_about}
+        titleYears={home.title_years_about}
+      />
+      <HomeCharacteristics
+        img={home.banner_characteristics}
+        imgMob={home.banner_mob_characteristics}
+        characteristic={home.list_characteristics}
+      />
+      <HomeGallery
+        id="gallery"
+        data-id="141"
+        data-es="152"
+        title={home.title_gallery}
+        content={home.content_gallery}
+        gallery={home.list_gallery}
+      />
+      <SeoEngine seo={home.meta_seo} />
     </div>
   )
 }
